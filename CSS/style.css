@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans:wght@300&family=Ubuntu:wght@300;400;500&display=swap');
+/* COMMON CSS  */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primaryColor: #0f2f44;
+    --yellowColor: #ffc712;
+    --thirdColor:#8484bf;
+    --primaryFont:'Ubuntu', sans-serif;
+    --secondryFont:'Open Sans', sans-serif;
+    --thirdFont: 'Abril Fatface', cursive;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width: 1170px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+body{
+    font-family: var(--primaryFont);
+}
+.aligncenter{
+    align-items: center;
+}
+/* COMMON CSS END */
+ 
+/* Header start  */
+header{
+    background-color: var(--primaryColor);
+    padding: 17px 0;
+}
+header .opeaning,
+header .wellcome{
+    width: 50%;
+}
+header .opeaning{
+    text-align: right;
+    font-size: 16px;
+    color: white;
+   
+}
+header .wellcome{
+    font-size: 16px;
+    color: white;
+    
+}
+/* Header end */
+
+/*todo NAVBER  */
+nav{
+    background-color: white;
+
+}
+nav .logo{
+    width: 40%;
+}
+nav .menu{
+    width: 60%;
+    text-align: right;
+    border-radius: 70px;
+}
+nav .menu li{
+    display: inline-block;
+    position: relative;
+  
+}
+nav .menu li a{
+    font-weight: 500;
+    color: var(--primaryColor);
+    font-size: 16px;
+    padding: 38px 15px;
+    display: block;
+    text-transform: uppercase;
+}
+nav .menu li:hover > a{
+    color: var(--yellowColor);
+    background-color:#fff9e6 ;
+    transition: .5s ;
+}
+nav .menu li span{
+    /* padding: 10px ; */
+    color: #999;
+    border-radius: 50%; 
+    border: 1px solid #999;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+}
+/** submenu  */
+/* nav .menu li .submenu{
+width: 200px;
+border-radius: 5px;
+position: absolute;
+box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+margin-top: 20px;
+margin-left: -150px;
+transition: .5s;
+font-style: italic;
+z-index: 2;
+}
+nav .menu li .submenu li{
+    display: block;
+    padding: 0px 0px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    text-align: left;
+} */
+nav .menu li .submenu{
+    width: 200px;
+    position: absolute;
+    text-align: left;
+    top: 20;
+    right: 0;
+    border: 1px solid black;
+    border-top: 5px solid rgb(255, 0, 0);
+    opacity: 0;
+    visibility: hidden;
+    /* z-index: 1; */
+    /* margin-left: -150px; */
+    margin-top: 40px; 
+    margin-left: 30px;
+}
+nav .menu li .submenu li{
+    display: block;
+    border:1px solid black ;
+    border-top: none;
+    position: relative;
+}
+nav .menu li .submenu li a{
+    padding: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color:white;
+    background-color:skyblue;
+    transition: .7s;
+}
+nav .menu li:hover .submenu{
+    position: absolute;
+    opacity: 1;
+    visibility: visible;
+    font-size: 20px;
+    margin-top: 0;
+    /* margin-left: 0; */
+    font-style: italic;
+    transition: .5s;
+
+}
+nav .menu li .submenu li:hover > a{
+    background-color: #ffc712;
+    font-size: 20px;
+   
+}
+/* !submenu2  */
+.menu li .submenu .submenu2{
+    width: 250px;
+    position: absolute;
+    top: 0; 
+    right: 200px;
+    border-top: 5px solid rgb(255, 0, 0);
+    margin-right: 40px;
+    margin-top: 30px;
+    transition: .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+ 
+
+.menu li .submenu .submenu2 li{
+    display: block;
+}
+.menu li .submenu .submenu2 li a{
+    text-align: center;
+    transition: .5s;
+}
+.menu li .submenu li:hover .submenu2{
+    visibility: visible;
+    opacity: 1;
+    margin-top: 0px;
+    margin-right: 0px;
+}
+
+.menu li .submenu .submenu2 li:hover a{
+    font-size: 20px;
+    background-color: #ffc712;
+    visibility: visible;
+    opacity: 1;
+}
+
+/*! submenu2 end */
+/** submenu end  */
+/* todo NAVBER END */
+/* BANNER START  */
+.banner{
+    background-image: url('../IMAGE/banner.jpg');
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+}
+.banner .text_group{
+    width: 40%;
+    height: 600px;
+    padding-top: 200px;
+
+}
+.banner .text_group h2{
+    font-size: 50px;
+    font-family: var(--primaryFont);
+    font-weight: 300;
+    color: var(--primaryColor);
+    line-height: .9;
+}
+.banner .text_group h1{
+    font-size: 80px;
+    font-family: var(--thirdFont);
+    font-weight: 500;
+    color: var(--primaryColor);
+    line-height: .9;
+
+}
+.banner .text_group h3{
+    font-size: 32px;
+    font-family: var(--primaryFont);
+    font-weight: 300;
+    color: var(--thirdColor);
+    letter-spacing: 12px;
+    line-height: 1.5;
+}
+.banner .text_group p{
+    font-size: 14px;
+    font-family: var(--secondryFont);
+    color: #666666;
+    line-height: 1.5;
+}
+.banner .text_group .button{
+    margin-top: 40px;
+    display: inline-block;
+}
+.banner .text_group .button .click{
+    background-color: var(--thirdColor);
+    color: white;
+    font-family: var(--primaryFont);
+    font-weight: 500;
+    font-size: 20px;
+    padding: 15px 21px;
+    border-radius: 8px;
+}
+.banner .text_group .button .play{
+    background-color: white;
+    color: var(--thirdColor);
+    font-size: 20px;
+    padding: 15px 19px;
+    margin-left: 0px;
+    border-radius: 50px;
+    text-align: center;
+    transition: .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+.banner .text_group .button:hover .play{
+    margin-left: 20px;
+    opacity: 1;
+    visibility: visible;
+}
+/* .banner .text_group .row{
+    height: 600px;
+    align-items: center;
+} */
+/* BANNER END */
